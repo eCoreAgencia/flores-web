@@ -7,14 +7,14 @@ cssnano = require('gulp-cssnano'),
 uglify = require('gulp-uglify'),
 browserSync = require('browser-sync').create() ;
 
-gulp.task('previewDist', function(){
-  browserSync.init({
-    notify: false,
-    server: {
-      baseDir: "docs"
-    }
-  });
-});
+// gulp.task('previewDist', function(){
+//   browserSync.init({
+//     notify: false,
+//     server: {
+//       baseDir: "docs"
+//     }
+//   });
+// });
 
 gulp.task('deleteDistFolder', ['icons'], function(){
   return del("./docs");
@@ -51,7 +51,7 @@ gulp.task('useminTrigger', ['deleteDistFolder'], function(){
 });
 
 gulp.task('usemin', ['styles', 'scripts'], function() {
-  return gulp.src("./app/index.html")
+  return gulp.src("./app/build.html")
   .pipe(usemin({
     css: [function(){return rev()}, function(){return cssnano()}],
     js: [function(){return rev()}, function(){return uglify()}]

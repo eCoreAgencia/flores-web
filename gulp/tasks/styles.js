@@ -16,3 +16,12 @@ gulp.task('styles', function() {
     })
     .pipe(gulp.dest('./app/temp/styles'));
 });
+gulp.task('styles-checkout', ['styles'], function() {
+  return gulp.src('./app/assets/styles/checkout-custom.css')
+    .pipe(postcss([cssImport, mixins, cssvars, nested, autoprefixer, hexrgba]))
+    .on('error', function(errorInfo) {
+      console.log(errorInfo.toString());
+      this.emit('end');
+    })
+    .pipe(gulp.dest('./app/temp/styles'));
+});
