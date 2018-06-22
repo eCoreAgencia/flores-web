@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
+
 body {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #FFFFFF;
+    background: transparent;
+    font-weight: 400;
 }
 
 img {
@@ -13,5 +17,7 @@ img {
 }
 
 a {
-    color: $mainOrange;
+    text-decoration: none;
+    color: #FFFFFF;
 }
+

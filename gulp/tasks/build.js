@@ -4,8 +4,8 @@ del = require ('del'),
 usemin = require('gulp-usemin'),
 rev = require('gulp-rev'),
 cssnano = require('gulp-cssnano'),
-uglify = require('gulp-uglify'),
-browserSync = require('browser-sync').create() ;
+uglify = require('gulp-uglify');
+
 
 // gulp.task('previewDist', function(){
 //   browserSync.init({
@@ -37,12 +37,17 @@ gulp.task('copyGeneralFiles', ['deleteDistFolder'], function(){
 
 gulp.task('optimizeImages', ['deleteDistFolder'], function() {
   return gulp.src(['./app/assets/images/**/*', '!./app/assets/images/icons', '!./app/assets/images/icons/**/*'])
-  .pipe(imagemin({
-    progressive: true,
-    interlaced: true,
-    multipass:true
-
-  }))
+  .pipe(imagemin([
+    imagemin.gifsicle({interlaced: true}),
+    imagemin.jpegtran({progressive: true}),
+    imagemin.optipng({optimizationLevel: 5}),
+    imagemin.svgo({
+        plugins: [
+            {removeViewBox: true},
+            {cleanupIDs: false}
+        ]
+    })
+]))
     .pipe(gulp.dest("./docs/assets/images"));
 });
 

@@ -12,6 +12,9 @@ gulp.task('default', function() {
   watch('./app/assets/images/icons/*.svg' , function() {
     gulp.start('icons');
   })
+  watch('./app/assets/images/**/*' , function() {
+    gulp.start('optimizeImages');
+  })
   
 });
 

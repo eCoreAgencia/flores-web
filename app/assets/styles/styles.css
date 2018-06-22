@@ -6,6 +6,7 @@
 @import "base/_global";
 /* block modules */
 @import "modules/_large-hero";
+@import "modules/_icon";
 @import "modules/_btn";
 @import "modules/_wrapper.css";
 @import "modules/_page-section.css";

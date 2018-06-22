@@ -1,64 +1,77 @@
 <header class="site-header site-header--tranparent site-header--color">
-    <section class="site-header__top site-header__top--border-bottom">
-        <div class="wrapper--full">
-            <div class="site-header__top__left">
-                <select class="site-header__selector">
-                    <option class="site-header__selector__opt" value="portugues">Português</option>
-                    <option class="site-header__selector__opt" value="ingles">Ingles</option>
-                </select>
-                <a class="icon-text-link" href="/atendimento">
-                    <span class="icon">
-                        <!-- svg here -->
-                        <img src="http://via.placeholder.com/30x30" />
-                    </span>
-                    <p class="generic-text generic-text--light">
-                        Atendimento
-                    </p>
-                </a>
-                <a class="icon-text-link" href="/duvidas">
-                    <span class="icon">
-                        <!-- svg here -->
-                        <img src="http://via.placeholder.com/30x30" />
-                    </span>
-                    <p class="generic-text generic-text--light">
-                        Duvidas e Sugestões
-                    </p>
-                </a>
+    <div class="wrapper--full">
+        <section class="site-header__top site-header__top site-header--border-bottom">
+                <div class="site-header__left site-header__left site-header--pull-left">
+                    <select class="site-header__selector">
+                        <option class="site-header__selector-opt" value="portugues">Português (BRA)</option>
+                        <option class="site-header__selector-opt" value="ingles">Ingles (US)</option>
+                    </select>
+                    <a class="icon__text-link" href="/atendimento">
+                        <span class="icon">
+                            <!-- svg here -->
+                            <img src="http://via.placeholder.com/30x30" />
+                        </span>
+                        <p class="site-header__text">
+                            Atendimento
+                        </p>
+                    </a>
+                    <a class="icon__text-link" href="/duvidas">
+                        <span class="icon">
+                            <!-- svg here -->
+                            <img src="http://via.placeholder.com/30x30" />
+                        </span>
+                        <p class="site-header__text">
+                            Duvidas e Sugestões
+                        </p>
+                    </a>
+                </div>
+                <div class="site-header__right">
+                    <a class="icon__text-link" href="/atendimento">
+                        <span class="icon">
+                            <!-- svg here -->
+                            <img src="http://via.placeholder.com/30x30" />
+                        </span>
+                        <p class="site-header__text">
+                            Minha Conta
+                        </p>
+                    </a>
+                    <a class="icon__text-link" href="/atendimento">
+                        <span class="icon">
+                            <!-- svg here -->
+                            <img src="http://via.placeholder.com/30x30" />
+                        </span>
+                        <p class="site-header__text">
+                            Favoritos
+                        </p>
+                    </a>
+                    <a class="icon__text-link cart" id="cart" href="/atendimento">
+                        <span class="icon">
+                            <!-- svg here -->
+                            <img src="http://via.placeholder.com/30x30" />
+                        </span>
+                        <i class="counter-baloon">
+                        </i>
+                    </a>
+                </div>
+          
+        </section>
+    </div>
+    <section class="site-header__bottom wrapper--full">
+
+            <div class="site-header__logo"> 
+                <img src="arquivos/ic_logo_branca.png" />
+                <img src="arquivos/ic_logo_floresnet.png"  />
             </div>
-            <div class="site-header__top__right">
-                <a class="icon-text-link" href="/atendimento">
-                    <span class="icon">
-                        <!-- svg here -->
-                        <img src="http://via.placeholder.com/30x30" />
-                    </span>
-                    <p class="generic-text generic-text--light">
-                        Minha Conta
-                    </p>
-                </a>
-                <a class="icon-text-link cart" id="cart" href="/atendimento">
-                    <span class="icon">
-                        <!-- svg here -->
-                        <img src="http://via.placeholder.com/30x30" />
-                    </span>
-                    <i class="counter-baloon">
-                    </i>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="site-header__bottom">
-        <div class="wrapper--full">
-            <div class="site-header__logo"> </div>
             <div class="site-header__menu-content">
                 <nav class="primary-nav">
                     <ul>
-                        <li class="link-text link text--bold">
+                        <li class="primary-nav__item">
                             <a href="/flores">FLORES</a>
                         </li>
-                        <li class="link-text link text--bold">
+                        <li class="primary-nav__item">
                             <a href="/cestas">CESTAS</a>
                         </li>
-                        <li class=" link-text link text--bold">
+                        <li class=" primary-nav__item">
                             <a href="/presentes">PRESENTES</a>
                         </li>
                     </ul>
@@ -70,7 +83,7 @@
                     <img src="http://via.placeholder.com/30x30" />
                 </div>
             </div>
-        </div>
+   
     </section>
     
 </header>
