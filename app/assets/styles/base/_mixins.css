@@ -5,13 +5,13 @@
 }
 
 @define-mixin atMedium {
-    @media (min-width: 800px){
+    @media (min-width: 800px) {
         @mixin-content;
     }
 }
 
 @define-mixin atLarge {
-    @media (min-width: 1010px){
+    @media (min-width: 1010px) {
         @mixin-content;
     }
 }
@@ -23,5 +23,6 @@
         display: table;
     }
 }
+
 
 /* REMEMBER THAT SMALL IS ABOVE 530PX SO THE DEFAULT BASELINE IS SMALLER AND NOT NEED TO BE DEFINED */

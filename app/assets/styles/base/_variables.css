@@ -1,4 +1,7 @@
 $mainBlue: #2f5572;
 $mainOrange: #d59541;
 $lineGrey: #bdbdbd;
-$lineWhiteTrans: rgba(255, 255, 255, 0.5);
+$transparentDivisor: rgba(255, 255, 255, 0.5);
+$rosarose: #BF3566;
+$bgcolor: transparent;
+$linear-mask: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);

@@ -6,7 +6,7 @@
 @import "base/_global";
 /* block modules */
 @import "modules/_large-hero";
-@import "modules/_icon";
+@import "modules/_icon-text";
 @import "modules/_btn";
 @import "modules/_wrapper.css";
 @import "modules/_page-section.css";
@@ -19,6 +19,7 @@
 @import "modules/_sprite";
 @import "modules/_site-footer";
 @import "modules/_site-header";
+@import "modules/_search-box";
 @import "modules/_primary-nav";
 @import "modules/_reveal-item";
 @import "modules/_modal";
