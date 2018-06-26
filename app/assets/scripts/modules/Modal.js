@@ -1,4 +1,4 @@
-import $ from 'jquery';
+
 
 class Modal {
   constructor() {

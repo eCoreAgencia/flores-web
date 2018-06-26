@@ -1,14 +1,22 @@
-import $ from 'jquery';
-
 class GeneralCorrections {
     constructor() {
         this.logoBusca = $('.search-box__icon');
-        this.btnBusca = $('.busca');
+        this.inputBusca = $('.busca');
+        this.btnBuscaVtex = $('.btn-buscar');
         this.appendPlease();
+        this.events();
+    }
+    events() {
+        this.logoBusca.click(this.simulateClick.bind(this));
     }
 
     appendPlease() {
-        this.logoBusca.append(this.btnBusca);
+        this.logoBusca.append(this.inputBusca);
+    }
+
+    simulateClick() {
+        this.btnBuscaVtex.trigger("click");
+        alert('capturado');
     }
 
 }

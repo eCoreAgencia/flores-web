@@ -1,23 +1,47 @@
 .search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    flex-basis: 34%;
+    padding-left: 35px;
+    font-family: 'Source Sans Pro', sans-serif;
     legend,
     label,
     select {
         display: none;
     }
     .busca {
+        display: flex;
         border: 0;
+        width: 100%;
+        padding: 0;
+        padding-right: 10%;
     }
     .btn-buscar {
         background: transparent;
         color: transparent;
-        width: 40px;
+        width: 55px;
         height: 40px;
         border: 0;
+        position: absolute;
+        top: 99999px;
     }
     &__icon {
         position: absolute;
-        top: 9px;
-        right: 20px;
+        right: 9px;
+        cursor: pointer;
+        top: 38px;
+    }
+    .fulltext-search-box {
+        overflow: visible;
+        border: #fff;
+        background: transparent;
+        border-bottom: 1px solid #fff;
+        color: #fff;
+        font-weight: 100;
+        font-family: 'Source Sans Pro', sans-serif;
+        width: 100%;
+        padding: 10px;
     }
 }

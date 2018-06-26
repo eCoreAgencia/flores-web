@@ -1,5 +1,6 @@
 /* single action tools */
 @import "normalize.css";
+@import "../../../node_modules/slick-carousel/slick/slick";
 /* global rule of the page body and html */
 @import "base/_variables";
 @import "base/_mixins";

@@ -1,3 +1,12 @@
+/* PLACEHOLDERS */
+%flex {
+    display: flex;
+}
+
+/* FONT-FAMILY   PLACEHOLDER */
+%font-family {font-family: 'Source Sans Pro', sans-serif;}
+
+/* COLORS */
 $mainBlue: #2f5572;
 $mainOrange: #d59541;
 $lineGrey: #bdbdbd;
