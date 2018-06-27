@@ -6,6 +6,9 @@
     flex-basis: 34%;
     padding-left: 35px;
     font-family: 'Source Sans Pro', sans-serif;
+    :focus {
+        outline: none;
+    }
     legend,
     label,
     select {

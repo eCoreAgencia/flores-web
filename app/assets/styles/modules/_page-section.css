@@ -4,7 +4,7 @@
     padding: 4.5rem 0;
   }
   &--blue {
-    background: $mainBlue;
+
     color: #fff;
   }
   &--no-b-padding-until-medium {

@@ -3,7 +3,7 @@
 
   &__icon {
     position: relative;
-    background-color: $mainOrange;
+
     display: inline-block;
     margin: 0 5px 5px 5px;
     width: 33%;

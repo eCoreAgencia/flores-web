@@ -6,6 +6,18 @@
   z-index: 2;
   height: 250px;
   font-family: 'Source Sans Pro', sans-serif;
+  &--transparent {
+    background: transparent;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.47) 30%, rgba(33, 36, 36, 1) 80%);
+  }
+  &:hover {
+    .site-header--transparent {
+      display: none;
+    }
+    .site-header--color {
+      display: block;
+    }
+  }
   &__logo {
     img {
       max-width: 283px;
@@ -16,10 +28,6 @@
         display: none;
       }
     }
-  }
-  &--transparent {
-    background: transparent;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.47) 30%, rgba(33, 36, 36, 1) 80%);
   }
   #Capa_1 {
     width: 32px;
@@ -87,9 +95,7 @@
   &__selector-opt {
     padding: 26px;
   }
-  &--is-expanded {
-    background-color: rgba($mainBlue, .55);
-  }
+  &--is-expanded {}
   &__btn-container {
     @mixin atMedium {
       float: right;
@@ -188,6 +194,22 @@
       top: 5px;
       left: -5px;
       border-right: 5px solid $rosarose;
+    }
+  }
+  /* HEADER HOVER EVENT */
+  &--color {
+    &:hover {
+      background: #fff;
+      .site-header__logo {
+        img {
+          &:nth-child(1) {
+            display: none;
+          }
+          &:nth-child(2) {
+            display: block;
+          }
+        }
+      }
     }
   }
 }
