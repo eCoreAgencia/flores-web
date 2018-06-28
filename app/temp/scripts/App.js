@@ -82,11 +82,16 @@ var _GeneralCorrections = __webpack_require__(3);
 
 var _GeneralCorrections2 = _interopRequireDefault(_GeneralCorrections);
 
+var _ColorHeader = __webpack_require__(4);
+
+var _ColorHeader2 = _interopRequireDefault(_ColorHeader);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobileMenu = new _MobileMenu2.default();
 var modal = new _Modal2.default();
 var generalCorrections = new _GeneralCorrections2.default();
+var colorHeader = new _ColorHeader2.default();
 
 /***/ }),
 /* 1 */
@@ -236,6 +241,58 @@ var GeneralCorrections = function () {
 }();
 
 exports.default = GeneralCorrections;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ColorHeader = function () {
+    function ColorHeader() {
+        _classCallCheck(this, ColorHeader);
+
+        this.headerContainer = $('.site-header__container');
+        this.primaryNavigation = $('.primary-nav li');
+        this.headerLogo = $('.site-header__logo');
+        this.headerGradient = $('.site-header--with-gradient');
+        this.siteHeader = $('.site-header');
+        this.events();
+    }
+
+    _createClass(ColorHeader, [{
+        key: 'events',
+        value: function events() {
+            this.headerContainer.hover(this.addColors.bind(this));
+        }
+    }, {
+        key: 'addColors',
+        value: function addColors() {
+            this.headerContainer.toggleClass('site-header__container--color');
+            this.primaryNavigation.toggleClass('primary-nav--color');
+            this.headerLogo.toggleClass('site-header__logo--color');
+            this.siteHeader.toggleClass('site-header--with-gradient');
+        }
+    }]);
+
+    return ColorHeader;
+}();
+
+exports.default = ColorHeader;
+
+// this.headerContainer.mouseover(this.addColors.bind(this));
+// this.primaryNavigation.mouseover(this.addColors.bind(this));
+// this.headerContainer.mouseout(this.removeColors.bind(this));
+// this.primaryNavigation.mouseout(this.removeColors.bind(this));
 
 /***/ })
 /******/ ]);

@@ -994,6 +994,8 @@ intead edit gulp/templates/sprite */
   }
     }
 .site-header {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1006,30 +1008,17 @@ intead edit gulp/templates/sprite */
   z-index: 2;
   height: 250px;
   font-family: 'Source Sans Pro', sans-serif;
+  background: transparent;
+  /* HEADER HOVER EVENT */
+  
 }
-.site-header--transparent {
-    background: transparent;
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), color-stop(30%, rgba(0, 0, 0, 0.47)), color-stop(80%, rgba(33, 36, 36, 1)));
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.47) 30%, rgba(33, 36, 36, 1) 80%);
+.site-header--with-gradient{
+      background: transparent;
+     background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), color-stop(30%, rgba(0, 0, 0, 0.47)), color-stop(80%, rgba(33, 36, 36, 1)));
+     background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.47) 30%, rgba(33, 36, 36, 1) 80%);
   }
-.site-header:hover .site-header--transparent {
-      display: none;
-    }
-.site-header:hover .site-header--color {
-      display: block;
-    }
-.site-header__logo img {
-      max-width: 283px;
-      max-height: auto;
-      width: 279px;
-      height: auto;
-    }
-.site-header__logo img:nth-child(2) {
-        display: none;
-      }
-.site-header #Capa_1 {
-    width: 32px;
-    height: 32px;
+.site-header__container--color{
+      background: #fff;
   }
 .site-header__top {
     height: 53px;
@@ -1087,10 +1076,25 @@ intead edit gulp/templates/sprite */
 .site-header__text {
     font-size: 1.05em;
   }
+.site-header__logo img {
+      max-width: 283px;
+      max-height: auto;
+      width: 279px;
+      height: auto;
+    }
+.site-header__logo img:nth-child(2) {
+        display: none;
+      }
+.site-header__logo--color img:nth-child(1){
+        display: none;
+      }
+.site-header__logo--color img:nth-child(2){
+        display: block;
+      }
 .site-header__selector {
     background: transparent;
     font-family: 'Source Sans Pro', sans-serif;
-    color: #FFFFFF;
+    color: #fff;
     height: 30px;
     border: 1px solid white;
     border-radius: 12px;
@@ -1098,10 +1102,8 @@ intead edit gulp/templates/sprite */
             appearance: none;
     -moz-appearance: none;
     position: relative;
+    outline: none;
   }
-.site-header__selector:focus {
-      outline: none;
-    }
 .site-header__selector::after {
       content: "";
       width: 0;
@@ -1210,6 +1212,10 @@ intead edit gulp/templates/sprite */
     margin-right: 10px;
     margin-top: 3px;
   }
+.site-header__icon #Capa_1 {
+      width: 32px;
+      height: 32px;
+    }
 .site-header__icon .st0 {
       fill: #fff;
     }
@@ -1241,16 +1247,6 @@ intead edit gulp/templates/sprite */
       left: -5px;
       border-right: 5px solid #BF3566;
     }
-/* HEADER HOVER EVENT */
-.site-header--color:hover {
-      background: #fff;
-    }
-.site-header--color:hover .site-header__logo img:nth-child(1) {
-            display: none;
-          }
-.site-header--color:hover .site-header__logo img:nth-child(2) {
-            display: block;
-          }
 .search-box {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1315,6 +1311,10 @@ intead edit gulp/templates/sprite */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
 }
 @media (min-width: 800px) {
 .primary-nav {
@@ -1337,7 +1337,31 @@ intead edit gulp/templates/sprite */
         justify-content: space-around;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
   }
+.primary-nav li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 0 5%;
+  }
+.primary-nav--color li {
+      border-bottom: 2px solid #BF3566;
+    }
+.primary-nav--color a {
+      color: #BF3566;
+    }
 .reveal-item {
   opacity: 0;
   -webkit-transition: all 1.5s ease-out;

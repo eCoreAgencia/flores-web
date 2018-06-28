@@ -3,6 +3,8 @@
   width: 100%;
   margin: 0 auto;
   display: flex;
+  align-items: center;
+  height: 100%;
   @mixin atMedium {
     padding-top: 0;
   }
@@ -18,5 +20,23 @@
     display: flex;
     justify-content: space-around;
     flex-basis: 100%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 0 5%;
+  }
+  &--color {
+    li {
+      border-bottom: 2px solid $rosarose;
+    }
+    a {
+      color: $rosarose;
+    }
   }
 }

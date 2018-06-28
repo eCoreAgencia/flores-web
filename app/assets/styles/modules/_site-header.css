@@ -1,4 +1,5 @@
 .site-header {
+  transition: all .2s ease-in-out;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -6,32 +7,13 @@
   z-index: 2;
   height: 250px;
   font-family: 'Source Sans Pro', sans-serif;
-  &--transparent {
-    background: transparent;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.47) 30%, rgba(33, 36, 36, 1) 80%);
+  background: transparent;
+  &--with-gradient{
+      background: transparent;
+     background: $linear-mask;
   }
-  &:hover {
-    .site-header--transparent {
-      display: none;
-    }
-    .site-header--color {
-      display: block;
-    }
-  }
-  &__logo {
-    img {
-      max-width: 283px;
-      max-height: auto;
-      width: 279px;
-      height: auto;
-      &:nth-child(2) {
-        display: none;
-      }
-    }
-  }
-  #Capa_1 {
-    width: 32px;
-    height: 32px;
+  &__container--color{
+      background: $blank;
   }
   &__top {
     height: 53px;
@@ -67,26 +49,45 @@
   &__text {
     font-size: 1.05em;
   }
+  &__logo {
+    img {
+      max-width: 283px;
+      max-height: auto;
+      width: 279px;
+      height: auto;
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+  &__logo--color{
+    img {
+      &:nth-child(1){
+        display: none;
+      }
+      &:nth-child(2){
+        display: block;
+      }
+    }
+  }
   &__selector {
     background: transparent;
     font-family: 'Source Sans Pro', sans-serif;
-    color: #FFFFFF;
+    color: $text-color;
     height: 30px;
     border: 1px solid white;
     border-radius: 12px;
     appearance: none;
     -moz-appearance: none;
     position: relative;
-    &:focus {
-      outline: none;
-    }
+    outline: none;
     &::after {
       content: "";
       width: 0;
       height: 0;
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
-      border-top: 10px solid #fff;
+      border-top: 10px solid $blank;
       position: absolute;
       right: 0;
       top: 0;
@@ -115,7 +116,7 @@
       left: 0;
       width: 20px;
       height: 3px;
-      background-color: #fff;
+      background-color: $blank;
       transform-origin: 0 0;
       transition: transform .3s ease-out;
     }
@@ -125,7 +126,7 @@
       left: 0;
       width: 20px;
       height: 3px;
-      background-color: #fff;
+      background-color: $blank;
       transition: all .3s ease-out;
       transform-origin: 0 50%;
     }
@@ -136,7 +137,7 @@
       left: 0;
       width: 20px;
       height: 3px;
-      background-color: #fff;
+      background-color: $blank;
       transform-origin: 0% 100%;
       transition: transform .3s ease-out;
     }
@@ -168,8 +169,12 @@
   &__icon {
     margin-right: 10px;
     margin-top: 3px;
+    #Capa_1 {
+      width: 32px;
+      height: 32px;
+    }
     .st0 {
-      fill: #fff;
+      fill: $blank;
     }
   }
   &__icon--spaced {
@@ -197,19 +202,5 @@
     }
   }
   /* HEADER HOVER EVENT */
-  &--color {
-    &:hover {
-      background: #fff;
-      .site-header__logo {
-        img {
-          &:nth-child(1) {
-            display: none;
-          }
-          &:nth-child(2) {
-            display: block;
-          }
-        }
-      }
-    }
-  }
+  
 }

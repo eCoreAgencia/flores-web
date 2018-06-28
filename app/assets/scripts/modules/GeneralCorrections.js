@@ -6,11 +6,11 @@ class GeneralCorrections {
     }
     events() {
         this.logoBusca.click(this.simulateClick.bind(this));
+
     }
 
     simulateClick() {
         this.btnBuscaVtex.trigger("click");
     }
-
 }
 export default GeneralCorrections;
