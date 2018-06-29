@@ -2,7 +2,7 @@ import MobileMenu from './modules/MobileMenu';
 import Modal from './modules/Modal';
 import GeneralCorrections from './modules/GeneralCorrections';
 import ColorHeader from './modules/ColorHeader';
-import SlickCarousel from './modules/SlickCarouselousel';
+import SlickCarousel from './modules/SlickCarousel';
 
 
 
