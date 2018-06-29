@@ -29,8 +29,6 @@ class ColorHeader {
         this.headerSelectorArrow.toggleClass('arrow-down--color');
     }
 }
-
-
 export default ColorHeader;
 
 // this.headerContainer.mouseover(this.addColors.bind(this));
