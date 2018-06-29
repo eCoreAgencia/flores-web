@@ -534,7 +534,12 @@ svg {
         -ms-flex-align: center;
             align-items: center;
     font-weight: 300;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
 }
+.icon-text--margin-left {
+        margin-left: 20px;
+    }
 .btn {
 
     color: #fff;
@@ -994,8 +999,6 @@ intead edit gulp/templates/sprite */
   }
     }
 .site-header {
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1009,16 +1012,24 @@ intead edit gulp/templates/sprite */
   height: 250px;
   font-family: 'Source Sans Pro', sans-serif;
   background: transparent;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
   /* HEADER HOVER EVENT */
-  
 }
-.site-header--with-gradient{
-      background: transparent;
-     background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), color-stop(30%, rgba(0, 0, 0, 0.47)), color-stop(80%, rgba(33, 36, 36, 1)));
-     background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.47) 30%, rgba(33, 36, 36, 1) 80%);
+.site-header--with-gradient {
+    background: transparent;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), color-stop(30%, rgba(0, 0, 0, 0.47)), color-stop(80%, rgba(33, 36, 36, 1)));
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.47) 30%, rgba(33, 36, 36, 1) 80%);
   }
-.site-header__container--color{
-      background: #fff;
+.site-header__container {
+    background: transparent;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+.site-header__container--color {
+    background: #fff;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
   }
 .site-header__top {
     height: 53px;
@@ -1068,13 +1079,19 @@ intead edit gulp/templates/sprite */
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -ms-flex-preferred-size: 19.4%;
-        flex-basis: 19.4%;
     max-width: 100%;
     min-width: 20%;
   }
 .site-header__text {
     font-size: 1.05em;
+  }
+.site-header__text--light-grey {
+    color: #616161;
+    fill: #616161;
+  }
+.site-header__logo {
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
   }
 .site-header__logo img {
       max-width: 283px;
@@ -1085,10 +1102,14 @@ intead edit gulp/templates/sprite */
 .site-header__logo img:nth-child(2) {
         display: none;
       }
-.site-header__logo--color img:nth-child(1){
+.site-header__logo--color {
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+.site-header__logo--color img:nth-child(1) {
         display: none;
       }
-.site-header__logo--color img:nth-child(2){
+.site-header__logo--color img:nth-child(2) {
         display: block;
       }
 .site-header__selector {
@@ -1103,18 +1124,37 @@ intead edit gulp/templates/sprite */
     -moz-appearance: none;
     position: relative;
     outline: none;
+    padding: 0px 25px 0px 10px;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
   }
-.site-header__selector::after {
-      content: "";
-      width: 0;
-      height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 10px solid #fff;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
+.site-header__selector__wrapper {
+    position: relative;
+  }
+.site-header__selector--color {
+    color: #616161;
+    border: 1px solid #616161;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+.site-header .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #fff;
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    z-index: -1;
+  }
+.site-header .arrow-down--color {
+    border-top: 6px solid #616161;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
 .site-header__selector-opt {
     padding: 26px;
   }
@@ -1219,6 +1259,18 @@ intead edit gulp/templates/sprite */
 .site-header__icon .st0 {
       fill: #fff;
     }
+.site-header__icon--light-grey {
+    fill: #616161;
+  }
+.site-header__icon--light-grey g {
+      fill: #616161;
+    }
+.site-header__icon--light-grey path {
+      fill: #616161;
+    }
+.site-header__icon--light-grey .st0 {
+      fill: #616161;
+    }
 .site-header__icon--spaced {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1293,6 +1345,9 @@ intead edit gulp/templates/sprite */
         cursor: pointer;
         top: 38px;
     }
+.search-box__icon--color path {
+            fill: #616161;
+        }
 .search-box .fulltext-search-box {
         overflow: visible;
         border: #fff;
@@ -1303,6 +1358,10 @@ intead edit gulp/templates/sprite */
         font-family: 'Source Sans Pro', sans-serif;
         width: 100%;
         padding: 10px;
+    }
+.search-box .fulltext-search-box--color {
+        border-bottom: 1px solid #616161;
+        color: #616161;
     }
 .primary-nav {
   padding-top: 10px;
@@ -1324,10 +1383,23 @@ intead edit gulp/templates/sprite */
 .primary-nav a {
     color: #fff;
     text-decoration: none;
-    padding: 5px 8px;
     display: block;
     font-size: 1em;
     font-weight: normal;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    text-align: center;
+    padding: 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 .primary-nav ul {
     display: -webkit-box;
@@ -1356,9 +1428,9 @@ intead edit gulp/templates/sprite */
             flex: 1;
     padding: 0 5%;
   }
-.primary-nav--color li {
-      border-bottom: 2px solid #BF3566;
-    }
+.primary-nav li:hover a{
+        border-bottom: 2px solid #BF3566
+      }
 .primary-nav--color a {
       color: #BF3566;
     }

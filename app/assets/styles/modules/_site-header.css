@@ -1,5 +1,4 @@
 .site-header {
-  transition: all .2s ease-in-out;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -8,12 +7,18 @@
   height: 250px;
   font-family: 'Source Sans Pro', sans-serif;
   background: transparent;
-  &--with-gradient{
-      background: transparent;
-     background: $linear-mask;
+  transition: all .5s ease-in-out;
+  &--with-gradient {
+    background: transparent;
+    background: $linear-mask;
   }
-  &__container--color{
-      background: $blank;
+  &__container {
+    background: transparent;
+    transition: all .5s ease-in-out;
+  }
+  &__container--color {
+    background: $blank;
+    transition: all .5s ease-in-out;
   }
   &__top {
     height: 53px;
@@ -42,14 +47,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-basis: 19.4%;
     max-width: 100%;
     min-width: 20%;
   }
   &__text {
     font-size: 1.05em;
   }
+  &__text--light-grey {
+    color: $soft-grey;
+    fill: $soft-grey;
+  }
   &__logo {
+    transition: all .5s ease-in-out;
     img {
       max-width: 283px;
       max-height: auto;
@@ -60,12 +69,13 @@
       }
     }
   }
-  &__logo--color{
+  &__logo--color {
+    transition: all .5s ease-in-out;
     img {
-      &:nth-child(1){
+      &:nth-child(1) {
         display: none;
       }
-      &:nth-child(2){
+      &:nth-child(2) {
         display: block;
       }
     }
@@ -81,17 +91,32 @@
     -moz-appearance: none;
     position: relative;
     outline: none;
-    &::after {
-      content: "";
-      width: 0;
-      height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 10px solid $blank;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
+    padding: 0px 25px 0px 10px;
+    transition: all .5s ease-in-out;
+  }
+  &__selector__wrapper {
+    position: relative;
+  }
+  &__selector--color {
+    color: $soft-grey;
+    border: 1px solid $soft-grey;
+    transition: all .5s ease-in-out;
+  }
+  .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #fff;
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    transition: all .5s ease-in-out;
+    z-index: -1;
+  }
+  .arrow-down--color {
+    border-top: 6px solid $soft-grey;
+    transition: all .5s ease-in-out;
   }
   &__selector-opt {
     padding: 26px;
@@ -177,6 +202,18 @@
       fill: $blank;
     }
   }
+  &__icon--light-grey {
+    fill: $soft-grey;
+    g {
+      fill: $soft-grey;
+    }
+    path {
+      fill: $soft-grey;
+    }
+    .st0 {
+      fill: $soft-grey;
+    }
+  }
   &__icon--spaced {
     display: flex;
     align-items: center;
@@ -202,5 +239,4 @@
     }
   }
   /* HEADER HOVER EVENT */
-  
 }

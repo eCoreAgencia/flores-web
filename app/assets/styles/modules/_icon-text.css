@@ -3,4 +3,8 @@
     display: flex;
     align-items: center;
     font-weight: 300;
+    flex-shrink: 0;
+    &--margin-left {
+        margin-left: 20px;
+    }
 }

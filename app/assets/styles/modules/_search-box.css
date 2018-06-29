@@ -36,6 +36,11 @@
         cursor: pointer;
         top: 38px;
     }
+    &__icon--color {
+        path {
+            fill: $soft-grey;
+        }
+    }
     .fulltext-search-box {
         overflow: visible;
         border: #fff;
@@ -46,5 +51,9 @@
         font-family: 'Source Sans Pro', sans-serif;
         width: 100%;
         padding: 10px;
+    }
+    .fulltext-search-box--color {
+        border-bottom: 1px solid $soft-grey;
+        color: $soft-grey;
     }
 }

@@ -1,3 +1,1 @@
-# travel-site
-
-Link to github pages:  https://nicolaregattieri.github.io/travel-site/ 
+B.E.M / Postcss / VTEX project by Nicola Regattieri
