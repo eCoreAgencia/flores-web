@@ -15,6 +15,7 @@
   &__container {
     background: transparent;
     transition: all .5s ease-in-out;
+    overflow: hidden;
   }
   &__container--color {
     background: $blank;
@@ -93,8 +94,9 @@
     outline: none;
     padding: 0px 25px 0px 10px;
     transition: all .5s ease-in-out;
+    z-index: 4;
   }
-  &__selector__wrapper {
+  .selector__wrapper {
     position: relative;
   }
   &__selector--color {
@@ -113,10 +115,13 @@
     top: 14px;
     transition: all .5s ease-in-out;
     z-index: -1;
-  }
-  .arrow-down--color {
-    border-top: 6px solid $soft-grey;
-    transition: all .5s ease-in-out;
+    &--color {
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid $soft-grey;
+      transition: all .5s ease-in-out;
+      z-index: 3;
+    }
   }
   &__selector-opt {
     padding: 26px;
@@ -190,6 +195,7 @@
   }
   &__cart-container {
     width: auto;
+    overflow: hidden;
   }
   &__icon {
     margin-right: 10px;

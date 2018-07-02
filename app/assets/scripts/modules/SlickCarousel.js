@@ -1,7 +1,7 @@
 class SlickCarousel {
     constructor() {
         this.carousel = $('.slide');
-        startSlick();
+        this.startSlick();
     }
     startSlick() {
         this.carousel.slick({
@@ -18,5 +18,4 @@ class SlickCarousel {
         });
     }
 }
-
 export default SlickCarousel;

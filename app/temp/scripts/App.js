@@ -331,7 +331,7 @@ var SlickCarousel = function () {
         _classCallCheck(this, SlickCarousel);
 
         this.carousel = $('.slide');
-        startSlick();
+        this.startSlick();
     }
 
     _createClass(SlickCarousel, [{

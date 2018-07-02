@@ -1,10 +1,11 @@
 /* single action tools */
 @import "normalize.css";
-@import "../../../node_modules/slick-carousel/slick/slick";
 /* global rule of the page body and html */
 @import "base/_variables";
 @import "base/_mixins";
 @import "base/_global";
+@import "modules/_slick.css";
+@import "modules/_slick-theme.css";
 /* block modules */
 @import "modules/_large-hero";
 @import "modules/_icon-text";

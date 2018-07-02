@@ -37,15 +37,28 @@
     justify-content: center;
     flex: 1;
     padding: 0 5%;
-    &:hover{
-      a{
-        border-bottom: 2px solid $rosarose
+    &:hover {
+      .primary-nav__item-tlt {
+        color: $rosarose;
+        border-bottom: 2px solid $rosarose;
       }
     }
   }
   &--color {
-    a {
-      color: $rosarose;
+    .primary-nav__item-tlt {
+      color: $light-green;
     }
+  }
+  &__big-drop {
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    display: flex;
+    top: 200px;
+    left: 0;
+  }
+  &__inside-list {
+    display: flex;
+    flex-direction: column;
   }
 }
