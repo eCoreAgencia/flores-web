@@ -306,11 +306,6 @@ var ColorHeader = function () {
 
 exports.default = ColorHeader;
 
-// this.headerContainer.mouseover(this.addColors.bind(this));
-// this.primaryNavigation.mouseover(this.addColors.bind(this));
-// this.headerContainer.mouseout(this.removeColors.bind(this));
-// this.primaryNavigation.mouseout(this.removeColors.bind(this));
-
 /***/ }),
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {

@@ -30,8 +30,3 @@ class ColorHeader {
     }
 }
 export default ColorHeader;
-
-// this.headerContainer.mouseover(this.addColors.bind(this));
-// this.primaryNavigation.mouseover(this.addColors.bind(this));
-// this.headerContainer.mouseout(this.removeColors.bind(this));
-// this.primaryNavigation.mouseout(this.removeColors.bind(this));

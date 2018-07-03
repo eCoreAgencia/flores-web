@@ -762,6 +762,9 @@ svg {
 .wrapper--narrow {
   max-width: 470px;
 }
+.wrapper--padding {
+  padding: 20px;
+}
 .wrapper--no-padding-until-medium {
     padding-left: 0;
     padding-right: 0;
@@ -1276,28 +1279,28 @@ intead edit gulp/templates/sprite */
     color: #616161;
     fill: #616161;
   }
-.site-header__logo {
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
-  }
 .site-header__logo img {
       max-width: 283px;
       max-height: auto;
       width: 279px;
       height: auto;
+      -webkit-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
     }
 .site-header__logo img:nth-child(2) {
         display: none;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
       }
-.site-header__logo--color {
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
-  }
 .site-header__logo--color img:nth-child(1) {
         display: none;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
       }
 .site-header__logo--color img:nth-child(2) {
         display: block;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
       }
 .site-header__selector {
     background: transparent;
@@ -1566,13 +1569,51 @@ intead edit gulp/templates/sprite */
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  padding-top: 0;
 }
-@media (min-width: 800px) {
-.primary-nav {
-    padding-top: 0
-}
-    }
-.primary-nav a {
+.primary-nav__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+.primary-nav__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 0 5%;
+  }
+.primary-nav__item:hover .primary-nav__item-tlt {
+        color: #BF3566;
+        border-bottom: 2px solid #BF3566;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+      }
+.primary-nav__item:hover .primary-nav__big-drop {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 270px;
+        opacity: 1;
+        -webkit-transition: opacity .5s ease-in-out;
+        transition: opacity .5s ease-in-out;
+      }
+.primary-nav__item-tlt {
     color: #fff;
     text-decoration: none;
     display: block;
@@ -1593,50 +1634,67 @@ intead edit gulp/templates/sprite */
         -ms-flex-pack: center;
             justify-content: center;
   }
-.primary-nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    padding: 0;
-    margin: 0;
-    height: 100%;
+.primary-nav__item-tlt {
+    border-bottom: 1px solid transparent;
   }
-.primary-nav li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    padding: 0 5%;
-  }
-.primary-nav li:hover .primary-nav__item-tlt {
-        color: #BF3566;
-        border-bottom: 2px solid #BF3566;
-      }
 .primary-nav--color .primary-nav__item-tlt {
       color: #90BC08;
     }
-.primary-nav__big-drop {
-    width: 100%;
-    background: #fff;
-    position: absolute;
+.primary-nav__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    top: 200px;
-    left: 0;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
+/* BIG DROPDOWNMENU */
+.primary-nav__big-drop {
+    display: none;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 152px;
+    left: 0;
+    height: 0px;
+    opacity: 0;
+    -webkit-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+  }
+.primary-nav__list-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    min-width: 0;
+    padding: 0;
+  }
+.primary-nav__list-block:nth-child(1) {
+      -ms-flex-preferred-size: 5%;
+          flex-basis: 5%;
+    }
+.primary-nav__list-block:nth-child(2) {
+      -ms-flex-preferred-size: 15%;
+          flex-basis: 15%;
+    }
+.primary-nav__list-block:nth-child(3) {
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+    }
+.primary-nav__list-block:nth-child(4) {
+      -ms-flex-preferred-size: 10%;
+          flex-basis: 10%;
+    }
+.primary-nav__list-block:nth-child(5) {
+      -ms-flex-preferred-size: 10%;
+          flex-basis: 10%;
+    }
 .primary-nav__inside-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1645,7 +1703,28 @@ intead edit gulp/templates/sprite */
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    min-width: 0;
+    padding: 0;
   }
+.primary-nav__inside-list-tlt {
+    color: #90BC08;
+    font-weight: 600;
+    font-size: 1em;
+  }
+.primary-nav__item-link {
+    color: #616161;
+  }
+.primary-nav__inside-list-item {
+    margin: 5px 0;
+  }
+.primary-nav__inside-list-item:hover .primary-nav__item-link {
+        color: #BF3566;
+      }
 .reveal-item {
   opacity: 0;
   -webkit-transition: all 1.5s ease-out;

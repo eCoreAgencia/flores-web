@@ -17,6 +17,9 @@
 &--narrow {
   max-width: 470px;
 }
+&--padding {
+  padding: 20px;
+}
 
   &--no-padding-until-medium {
     padding-left: 0;

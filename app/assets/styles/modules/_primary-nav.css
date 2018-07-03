@@ -5,10 +5,36 @@
   display: flex;
   align-items: center;
   height: 100%;
-  @mixin atMedium {
-    padding-top: 0;
+  padding-top: 0;
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 100%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
   }
-  a {
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 0 5%;
+    &:hover {
+      .primary-nav__item-tlt {
+        color: $rosarose;
+        border-bottom: 2px solid $rosarose;
+        transition: all .5s ease-in-out;
+      }
+      .primary-nav__big-drop {
+        display: flex;
+        height: 270px;
+        opacity: 1;
+        transition: opacity .5s ease-in-out;
+      }
+    }
+  }
+  &__item-tlt {
     color: #fff;
     text-decoration: none;
     display: block;
@@ -23,42 +49,75 @@
     align-items: center;
     justify-content: center;
   }
-  ul {
-    display: flex;
-    justify-content: space-around;
-    flex-basis: 100%;
-    padding: 0;
-    margin: 0;
-    height: 100%;
-  }
-  li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    padding: 0 5%;
-    &:hover {
-      .primary-nav__item-tlt {
-        color: $rosarose;
-        border-bottom: 2px solid $rosarose;
-      }
-    }
+  &__item-tlt {
+    border-bottom: 1px solid transparent;
   }
   &--color {
     .primary-nav__item-tlt {
       color: $light-green;
     }
   }
+  &__container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  /* BIG DROPDOWNMENU */
   &__big-drop {
+    display: none;
     width: 100%;
     background: #fff;
     position: absolute;
-    display: flex;
-    top: 200px;
+    top: 152px;
     left: 0;
+    height: 0px;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+  }
+  &__list-block {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 0;
+    padding: 0;
+    &:nth-child(1) {
+      flex-basis: 5%;
+    }
+    &:nth-child(2) {
+      flex-basis: 15%;
+    }
+    &:nth-child(3) {
+      flex-basis: 50%;
+    }
+    &:nth-child(4) {
+      flex-basis: 10%;
+    }
+    &:nth-child(5) {
+      flex-basis: 10%;
+    }
   }
   &__inside-list {
     display: flex;
     flex-direction: column;
+    flex: 1;
+    flex-wrap: wrap;
+    min-width: 0;
+    padding: 0;
+  }
+  &__inside-list-tlt {
+    color: $light-green;
+    font-weight: 600;
+    font-size: 1em;
+  }
+  &__item-link {
+    color: $soft-grey;
+  }
+  &__inside-list-item {
+    margin: 5px 0;
+    &:hover {
+      .primary-nav__item-link {
+        color: $rosarose;
+      }
+    }
   }
 }

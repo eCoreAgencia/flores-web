@@ -59,25 +59,27 @@
     fill: $soft-grey;
   }
   &__logo {
-    transition: all .5s ease-in-out;
     img {
       max-width: 283px;
       max-height: auto;
       width: 279px;
       height: auto;
+      transition: all .5s ease-in-out;
       &:nth-child(2) {
         display: none;
+        transition: all .5s ease-in-out;
       }
     }
   }
   &__logo--color {
-    transition: all .5s ease-in-out;
     img {
       &:nth-child(1) {
         display: none;
+        transition: all .5s ease-in-out;
       }
       &:nth-child(2) {
         display: block;
+        transition: all .5s ease-in-out;
       }
     }
   }
