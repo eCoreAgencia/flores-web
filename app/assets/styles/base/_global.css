@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
-
 body {
     font-family: 'Source Sans Pro', sans-serif;
     color: #FFFFFF;
@@ -19,10 +18,24 @@ a {
     text-decoration: none;
     color: #FFFFFF;
 }
- li {
+
+li {
     list-style: none;
     display: inline-block;
-  }
-  svg {
-      fill: white;
-  }
+}
+
+svg {
+    fill: white;
+}
+
+.divisor {
+    height: 1px;
+    width: 100%;
+    display: block;
+    background: $linegrey;
+    margin: 0 auto;
+    width: 96%;
+    &--color {
+        background: transparent;
+    }
+}

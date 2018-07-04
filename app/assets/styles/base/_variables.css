@@ -7,7 +7,7 @@
 %font-family {font-family: 'Source Sans Pro', sans-serif;}
 
 /* COLORS */
-$lineGrey: #bdbdbd;
+$linegrey: #bdbdbd;
 $transparentDivisor: rgba(255, 255, 255, 0.5);
 $rosarose: #BF3566;
 $bgcolor: transparent;
@@ -16,4 +16,5 @@ $text-color: #fff;
 $blank: #fff;
 $dark-grey: #212121;
 $soft-grey: #616161;
+$space-grey: #E7E7E7;
 $light-green: #90BC08;

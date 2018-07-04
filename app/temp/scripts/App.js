@@ -277,6 +277,7 @@ var ColorHeader = function () {
         this.headerSelectorArrow = $('.arrow-down');
         this.searchBox = $('.fulltext-search-box');
         this.searchBoxIcon = $('.search-box__icon');
+        this.divisor = $('.divisor');
         this.events();
     }
 
@@ -298,6 +299,7 @@ var ColorHeader = function () {
             this.searchBox.toggleClass('fulltext-search-box--color');
             this.searchBoxIcon.toggleClass('search-box__icon--color');
             this.headerSelectorArrow.toggleClass('arrow-down--color');
+            this.divisor.toggleClass('divisor--color');
         }
     }]);
 

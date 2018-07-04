@@ -1,4 +1,7 @@
-#set($id = $product.Id) #set($idSku = $product.productVariantId) #set($uri = $product.Uri) #set($escapedName = $product.HtmlEscapedName)
+#set($id = $product.Id) 
+#set($idSku = $product.productVariantId) 
+#set($uri = $product.Uri) 
+#set($escapedName = $product.HtmlEscapedName)
 
 <a title="$escapedName" href="$uri" class="productShelf">
   <span class="principal">$product.GetImageTag(30)</span>
@@ -13,7 +16,6 @@
   </span>
   <article>
     <h4>$product.Name</h4>
-
     #if ($product.IsInStock) #if ($product.HasBestPrice)
     <span class="precos">
       <span class="oldPrice">$product.ListPrice</span>

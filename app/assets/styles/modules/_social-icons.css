@@ -1,27 +1,14 @@
-.social-icons {
-  text-align: center;
-
-  &__icon {
-    position: relative;
-
-    display: inline-block;
-    margin: 0 5px 5px 5px;
-    width: 33%;
-    height: 72px;
-
-    @mixin atSmall {
-      width: 72px;
-      margin: 0 5px;
-
+.social-icon {
+  svg {
+    fill: $rosarose;
+    width: 45px;
+    height: auto;
+    &:nth-child(3) {
+      padding: 3px;
     }
-
-    .icon {
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform:  translate(-50%, -50%);
-    }
-
+  }
+  path {
+    width: 100%;
+    height: auto;
   }
 }
