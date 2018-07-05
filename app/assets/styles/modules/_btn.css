@@ -1,18 +1,17 @@
 .btn {
-
     color: #fff;
     text-decoration: none;
     padding: .75rem 1.2rem;
     display: inline-block;
-
-    &--orange{
-
+    &--green {
+        background: $light-green;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
     }
-
     &--large {
         padding: 1.1rem 1.9rem;
-
-        @mixin atSmall{
+        @mixin atSmall {
             font-size: 1.25rem;
         }
     }

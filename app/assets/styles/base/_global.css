@@ -30,12 +30,18 @@ svg {
 
 .divisor {
     height: 1px;
-    width: 100%;
     display: block;
     background: $linegrey;
     margin: 0 auto;
     width: 96%;
     &--color {
         background: transparent;
+    }
+    &--vertical {
+        width: 1px;
+        display: block;
+        background: $linegrey;
+        margin: 15px 0;
+        padding: 0;
     }
 }

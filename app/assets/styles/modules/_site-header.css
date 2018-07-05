@@ -53,6 +53,7 @@
   }
   &__text {
     font-size: 1.05em;
+    color: #fff;
   }
   &__text--light-grey {
     color: $soft-grey;

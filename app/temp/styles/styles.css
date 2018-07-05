@@ -357,7 +357,6 @@ svg {
 }
 .divisor {
     height: 1px;
-    width: 100%;
     display: block;
     background: #bdbdbd;
     margin: 0 auto;
@@ -365,6 +364,13 @@ svg {
 }
 .divisor--color {
         background: transparent;
+    }
+.divisor--vertical {
+        width: 1px;
+        display: block;
+        background: #bdbdbd;
+        margin: 15px 0;
+        padding: 0;
     }
 /* Slider */
 .slick-slider
@@ -570,14 +576,16 @@ svg {
         margin-left: 20px;
     }
 .btn {
-
     color: #fff;
     text-decoration: none;
     padding: .75rem 1.2rem;
     display: inline-block;
 }
-.btn--orange{
-
+.btn--green {
+        background: #90BC08;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
     }
 .btn--large {
         padding: 1.1rem 1.9rem;
@@ -622,7 +630,7 @@ svg {
     padding-left: 0;
     padding-right: 0;
   }
-@media (min-width: 1010px) {
+@media (min-width: 1024px) {
 .wrapper--no-padding-until-large {
       padding-left: 18px;
       padding-right: 18px
@@ -668,7 +676,7 @@ svg {
 .page-section--no-b-padding-until-large {
     padding-bottom: 0;
   }
-@media (min-width: 1010px) {
+@media (min-width: 1024px) {
 .page-section--no-b-padding-until-large {
       padding-bottom: 4.5rem
   }
@@ -676,7 +684,7 @@ svg {
 .page-section--testimonials {
     background-color: #e0e6ef;
   }
-@media (min-width: 1010px) {
+@media (min-width: 1024px) {
       .page-section--testimonials.lazyloaded {
         background: url('../../assets/images/testimonials-bg.jpg') top center no-repeat;
         background-size: cover;
@@ -774,7 +782,7 @@ svg {
       width: 63%;
     }
     }
-@media (min-width: 1010px) {
+@media (min-width: 1024px) {
     .row__b-margin-until-large {
       margin-bottom: 0;
     }
@@ -811,7 +819,7 @@ svg {
       display: -ms-flexbox;
       display: flex;
     }
-@media (min-width: 1010px) {
+@media (min-width: 1024px) {
 .flexbox .row--equal-height-at-large {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -911,7 +919,7 @@ svg {
   padding: 0 18px 1px 18px;
   margin-bottom: 98px;
 }
-@media (min-width: 1010px) {
+@media (min-width: 1024px) {
 .testimonial {
     margin-bottom: 0;
     padding: 0 1.8125rem 1px 1.825rem
@@ -1015,8 +1023,15 @@ intead edit gulp/templates/sprite */
 .site-footer {
   color: #616161;
   background: #E7E7E7;
-  font-size: .9em;
+  font-size: .8em;
 }
+.site-footer div {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+.site-footer .divisor--vertical {
+    padding: 0;
+  }
 .site-footer img {
     max-width: 50%;
     height: auto;
@@ -1065,10 +1080,10 @@ intead edit gulp/templates/sprite */
           -ms-flex-align: center;
               align-items: center;
     }
-.site-footer .card-icons {
+.site-footer__card-icons {
     border-radius: 10px;
   }
-.site-footer .card-icons--svg-card {
+.site-footer__card-icons svg {
       width: 48px;
       height: auto;
     }
@@ -1084,6 +1099,85 @@ intead edit gulp/templates/sprite */
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
     }
+.site-footer__compra-segura img {
+      max-width: 80px;
+      height: auto;
+    }
+/* FORM */
+.site-footer__novidades {
+
+  }
+.site-footer fieldset {
+    border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+.site-footer input {
+    border: 1px solid #616161;
+    border-radius: 25px;
+    padding: 10px;
+    outline: none;
+    margin-right: 10px;
+  }
+.site-footer form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+@media (min-width: 1024px) {
+.site-footer form {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row
+  }
+    }
+.site-footer__info-small {
+    color: #616161;
+    font-size: .4em;
+    text-align: center;
+    background: #E7E7E7;
+    margin: 0;
+    padding: 12px 170px;
+  }
+.site-footer__copyright {
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    font-size: 0.6em;
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    text-align: center;
+    padding-left: 177px;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+.site-footer__creators {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+.site-footer__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #90BC08;
+}
 .site-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1171,6 +1265,7 @@ intead edit gulp/templates/sprite */
   }
 .site-header__text {
     font-size: 1.05em;
+    color: #fff;
   }
 .site-header__text--light-grey {
     color: #616161;
