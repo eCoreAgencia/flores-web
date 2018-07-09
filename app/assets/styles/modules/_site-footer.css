@@ -67,9 +67,7 @@
     }
   }
   /* FORM */
-  &__novidades {
 
-  }
   fieldset {
     border: none;
     display: flex;
@@ -81,7 +79,7 @@
     border-radius: 25px;
     padding: 10px;
     outline: none;
-    margin-right: 10px;
+    margin-right: 5px;
   }
   form {
     display: flex;
