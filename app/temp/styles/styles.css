@@ -605,7 +605,7 @@ svg {
 }
 .wrapper--full {
     max-width: 100%;
-    padding: 0 30px;
+    padding: 0 2rem;
   }
 .wrapper--medium {
     max-width: 976px;
@@ -654,42 +654,8 @@ svg {
   }
     }
 .page-section {
-  padding: 1.2rem 0;
+  
 }
-@media (min-width: 800px) {
-.page-section {
-    padding: 4.5rem 0
-}
-    }
-.page-section--blue {
-
-    color: #fff;
-  }
-.page-section--no-b-padding-until-medium {
-    padding-bottom: 0;
-  }
-@media (min-width: 800px) {
-.page-section--no-b-padding-until-medium {
-      padding-bottom: 4.5rem
-  }
-    }
-.page-section--no-b-padding-until-large {
-    padding-bottom: 0;
-  }
-@media (min-width: 1024px) {
-.page-section--no-b-padding-until-large {
-      padding-bottom: 4.5rem
-  }
-    }
-.page-section--testimonials {
-    background-color: #e0e6ef;
-  }
-@media (min-width: 1024px) {
-      .page-section--testimonials.lazyloaded {
-        background: url('../../assets/images/testimonials-bg.jpg') top center no-repeat;
-        background-size: cover;
-      }
-    }
 .headline {
   font-size: 1.9rem;
   font-weight: 300;
