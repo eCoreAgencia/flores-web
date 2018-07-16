@@ -27,7 +27,7 @@
         transition: all .5s ease-in-out;
       }
       .primary-nav__big-drop {
-        display: flex;
+        visibility: visible;
         height: 270px;
         opacity: 1;
         transition: opacity .5s ease-in-out;
@@ -61,10 +61,12 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    height: 17rem;
+    ;
   }
   /* BIG DROPDOWNMENU */
   &__big-drop {
-    display: none;
+    visibility: hidden;
     width: 100%;
     background: #fff;
     position: absolute;
