@@ -656,43 +656,6 @@ svg {
 .page-section {
   
 }
-<<<<<<< HEAD
-=======
-@media (min-width: 800px) {
-.page-section {
-    padding: 4.5rem 0
-}
-    }
-.page-section--blue {
-
-    color: #fff;
-  }
-.page-section--no-b-padding-until-medium {
-    padding-bottom: 0;
-  }
-@media (min-width: 800px) {
-.page-section--no-b-padding-until-medium {
-      padding-bottom: 4.5rem
-  }
-    }
-.page-section--no-b-padding-until-large {
-    padding-bottom: 0;
-  }
-@media (min-width: 1220px) {
-.page-section--no-b-padding-until-large {
-      padding-bottom: 4.5rem
-  }
-    }
-.page-section--testimonials {
-    background-color: #e0e6ef;
-  }
-@media (min-width: 1220px) {
-      .page-section--testimonials.lazyloaded {
-        background: url('../../assets/images/testimonials-bg.jpg') top center no-repeat;
-        background-size: cover;
-      }
-    }
->>>>>>> 16c6cb98c87e5053f67195d496f2f2cd0cee00a1
 .headline {
   font-size: 1.9rem;
   font-weight: 300;
@@ -866,6 +829,7 @@ svg {
     margin-left: auto;
     margin-right: auto;
     margin-top: -15px;
+    text-align: center;
   }
 .section-title__icon svg {
       width: 15rem;
